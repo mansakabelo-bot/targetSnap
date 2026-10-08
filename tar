@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>$500 Target Reward Opportunity</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f4f6;
+    color: #172033;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.page {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 42px 34px 48px;
+    background:
+        radial-gradient(circle at 88% 18%, rgba(255,255,255,.12) 0 85px, transparent 86px),
+        radial-gradient(circle at 95% 30%, rgba(255,255,255,.10) 0 150px, transparent 151px),
+        linear-gradient(135deg, #bd0018, #ed071e);
+    color: #fff;
+}
+
+.hero:after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    right: -180px;
+    top: -90px;
+    border: 70px solid rgba(255,255,255,.07);
+    border-radius: 50%;
+}
+
+.offer-badge {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 18px;
+    border: 2px solid rgba(255,255,255,.35);
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.offer-dot {
+    width: 12px;
+    height: 12px;
+    background: #ffd21c;
+    border-radius: 50%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.02;
+    margin: 0 0 20px;
+    max-width: 570px;
+    letter-spacing: -1px;
+}
+
+.hero h1 .amount {
+    color: #ffd21c;
+}
+
+.hero-description {
+    max-width: 570px;
+    font-size: 19px;
+    line-height: 1.55;
+    color: rgba(255,255,255,.94);
+    margin: 0;
+}
+
+.gift-card {
+    position: absolute;
+    right: 32px;
+    bottom: 45px;
+    width: 185px;
+    height: 120px;
+    border-radius: 15px;
+    background: #e50920;
+    border: 2px solid rgba(255,255,255,.38);
+    box-shadow: 0 15px 35px rgba(0,0,0,.22);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.target-symbol {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.target-symbol:after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    left: 5px;
+    top: 5px;
+}
+
+.target-word {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.gift-price {
+    font-size: 22px;
+    font-weight: 900;
+    margin-top: 5px;
+}
+
+/* STATS */
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    padding: 27px 25px;
+    text-align: center;
+    background: #fff;
+}
+
+.stat-divider {
+    background: #d9dde3;
+}
+
+.stat-number {
+    font-size: 35px;
+    font-weight: 900;
+    color: #bd0018;
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #687385;
+    margin-top: 6px;
+}
+
+/* CONTENT */
+
+.content {
+    padding: 12px 34px 45px;
+}
+
+.section-title {
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin: 15px 0 30px;
+    color: #4d5868;
+}
+
+/* STEPS */
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-bottom: 30px;
+}
+
+.step-number {
+    flex: 0 0 62px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: #d9001b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    font-weight: 900;
+    box-shadow: 0 8px 20px rgba(217,0,27,.16);
+}
+
+.step h3 {
+    margin: 0 0 4px;
+    font-size: 21px;
+}
+
+.step p {
+    margin: 0;
+    color: #6a7483;
+    font-size: 15px;
+}
+
+/* CTA */
+
+.cta {
+    display: block;
+    text-align: center;
+    background: #d9001b;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 18px 25px;
+    border-radius: 9px;
+    margin: 10px 0 12px;
+    box-shadow: 0 8px 20px rgba(217,0,27,.20);
+    transition: transform .2s, background .2s;
+}
+
+.cta:hover {
+    background: #b90017;
+    transform: translateY(-2px);
+}
+
+.disclaimer {
+    text-align: center;
+    font-size: 11px;
+    color: #818997;
+    line-height: 1.5;
+    margin-top: 12px;
+}
+
+/* ACTIVITY POPUP */
+
+.activity {
+    position: fixed;
+    left: 18px;
+    bottom: 18px;
+    width: min(350px, calc(100% - 36px));
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.18);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transform: translateY(130px);
+    opacity: 0;
+    transition: transform .45s ease, opacity .45s ease;
+    z-index: 100;
+    border: 1px solid #eee;
+}
+
+.activity.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #d9001b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.activity-text {
+    font-size: 13px;
+    line-height: 1.35;
+    color: #3d4654;
+}
+
+.activity-text strong {
+    color: #182131;
+}
+
+.activity-time {
+    display: block;
+    color: #8a929d;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+/* MOBILE */
+
+@media(max-width: 650px) {
+
+    .hero {
+        padding: 30px 23px 35px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+        max-width: 100%;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .gift-card {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: 28px auto 0;
+    }
+
+    .stats {
+        padding: 22px 10px;
+    }
+
+    .stat-number {
+        font-size: 27px;
+    }
+
+    .stat-label {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .content {
+        padding: 10px 22px 35px;
+    }
+
+    .step {
+        gap: 16px;
+    }
+
+    .step-number {
+        width: 53px;
+        height: 53px;
+        flex-basis: 53px;
+        font-size: 22px;
+    }
+
+    .step h3 {
+        font-size: 18px;
+    }
+
+    .step p {
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="offer-badge">
+            <span class="offer-dot"></span>
+            LIMITED TIME OFFER
+        </div>
+
+        <div class="hero-content">
+
+            <h1>
+                CLAIM A <span class="amount">$500</span><br>
+                TARGET GIFT CARD
+            </h1>
+
+            <p class="hero-description">
+                Enter for a chance to get a $500 Target gift card.
+                Complete the required participating partner offers
+                to qualify.
+            </p>
+
+        </div>
+
+        <div class="gift-card">
+
+            <div class="target-symbol"></div>
+
+            <div class="target-word">target</div>
+
+            <div class="gift-price">$500</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LIVE STATS -->
+    <section class="stats">
+
+        <div>
+            <div class="stat-number" id="claimedCounter">
+                1,246
+            </div>
+
+            <div class="stat-label">
+                CURRENT ENTRIES
+            </div>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <div>
+            <div class="stat-number" id="countdown">
+                17:32
+            </div>
+
+            <div class="stat-label">
+                TIME REMAINING
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- STEPS -->
+    <main class="content">
+
+        <h2 class="section-title">
+            HOW TO QUALIFY
+        </h2>
+
+
+        <div class="step">
+
+            <div class="step-number">1</div>
+
+            <div>
+                <h3>Click the Button Below</h3>
+
+                <p>
+                    Access the promotional offer and review the requirements.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">2</div>
+
+            <div>
+                <h3>Enter Your Basic Info</h3>
+
+                <p>
+                    Provide the information requested by the offer provider.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">3</div>
+
+            <div>
+                <h3>Complete Qualifying Deals</h3>
+
+                <p>
+                    Complete the required participating partner offers.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">4</div>
+
+            <div>
+                <h3>Complete the Qualification</h3>
+
+                <p>
+                    Reward eligibility is determined after qualifying
+                    requirements are completed and verified.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- REPLACE THIS URL -->
+        <a
+            class="cta"
+            href="YOUR_AFFILIATE_OFFER_URL"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            CHECK MY ELIGIBILITY →
+        </a>
+
+        <p class="disclaimer">
+            This is a promotional offer. Participation does not guarantee
+            receipt of a reward. Eligibility, qualifying requirements,
+            availability and restrictions may apply. This promotion is not
+            sponsored, endorsed, administered by, or affiliated with Target.
+            Target is a trademark of its respective owner.
+        </p>
+
+    </main>
+
+</div>
+
+
+<!-- ACTIVITY NOTIFICATION -->
+<div
+    class="activity"
+    id="activity"
+    aria-live="polite"
+>
+
+    <div class="activity-icon">
+        ✓
+    </div>
+
+    <div class="activity-text" id="activityText">
+        Recent promotional activity
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   CONFIGURATION
+   ========================================================= */
+
+/*
+   Replace this with your affiliate URL in the HTML above.
+
+   Countdown:
+   This is a session countdown that starts at 17 minutes 32 seconds
+   when the visitor opens the page.
+*/
+
+const START_MINUTES = 17;
+const START_SECONDS = 32;
+
+
+/*
+   IMPORTANT:
+   These are DEMO activity messages, not real claims.
+
+   For production, replace these with verified activity
+   supplied by your offer/backend rather than presenting
+   fabricated people as real customers.
+*/
+
+const activityMessages = [
+    {
+        name: "A recent participant",
+        amount: "$425"
+    },
+    {
+        name: "A recent participant",
+        amount: "$300"
+    },
+    {
+        name: "A recent participant",
+        amount: "$500"
+    },
+    {
+        name: "A recent participant",
+        amount: "$275"
+    },
+    {
+        name: "A recent participant",
+        amount: "$450"
+    }
+];
+
+
+/* =========================================================
+   LIVE COUNTDOWN
+   ========================================================= */
+
+let endTime =
+    Date.now() +
+    ((START_MINUTES * 60 + START_SECONDS) * 1000);
+
+const countdownElement =
+    document.getElementById("countdown");
+
+
+function updateCountdown() {
+
+    const remaining =
+        Math.max(0, endTime - Date.now());
+
+    const totalSeconds =
+        Math.floor(remaining / 1000);
+
+    const minutes =
+        Math.floor(totalSeconds / 60);
+
+    const seconds =
+        totalSeconds % 60;
+
+    countdownElement.textContent =
+        String(minutes).padStart(2, "0") +
+        ":" +
+        String(seconds).padStart(2, "0");
+
+
+    if (remaining <= 0) {
+
+        clearInterval(countdownTimer);
+
+        countdownElement.textContent = "00:00";
+
+    }
+
+}
+
+
+updateCountdown();
+
+const countdownTimer =
+    setInterval(updateCountdown, 250);
+
+
+/* =========================================================
+   ACTIVITY NOTIFICATION
+   ========================================================= */
+
+const activity =
+    document.getElementById("activity");
+
+const activityText =
+    document.getElementById("activityText");
+
+
+let activityIndex = 0;
+
+
+function showActivity() {
+
+    const item =
+        activityMessages[activityIndex];
+
+    activityText.innerHTML =
+        "<strong>" +
+        item.name +
+        "</strong> recently completed a qualifying offer " +
+        "associated with a potential reward of " +
+        "<strong>" +
+        item.amount +
+        "</strong>" +
+        '<span class="activity-time">Recent activity</span>';
+
+    activity.classList.add("show");
+
+
+    setTimeout(function() {
+
+        activity.classList.remove("show");
+
+    }, 4200);
+
+
+    activityIndex++;
+
+    if (activityIndex >= activityMessages.length) {
+        activityIndex = 0;
+    }
+
+}
+
+
+/*
+   First notification after 3 seconds.
+   Subsequent notifications every 8 seconds.
+*/
+
+setTimeout(showActivity, 3000);
+
+setInterval(showActivity, 8000);
+
+
+/* =========================================================
+   ENTRY COUNTER
+   ========================================================= */
+
+/*
+   This is a visual session counter, not a claim of actual
+   verified claims. It increases gradually while the visitor
+   remains on the page.
+*/
+
+let entries = 1246;
+
+const claimedCounter =
+    document.getElementById("claimedCounter");
+
+
+function increaseEntries() {
+
+    entries += 1;
+
+    claimedCounter.textContent =
+        entries.toLocaleString();
+
+}
+
+
+/*
+   Slowly update the visual counter.
+*/
+
+setInterval(function() {
+
+    if (Math.random() > 0.45) {
+        increaseEntries();
+    }
+
+}, 11000);
+
+</script>
+
+</body>
+</html>
